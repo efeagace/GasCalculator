@@ -5,15 +5,175 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="15dp"
+        android:text="Gas Calculator"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFirstGas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Consumo Combustivel 1"
+        app:layout_constraintBottom_toTopOf="@id/spFirst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle" />
+
+    <EditText
+        android:id="@+id/etFirstGas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@id/spFirst"
+        app:layout_constraintEnd_toStartOf="@id/btSearchFirstGas"
+        app:layout_constraintStart_toEndOf="@+id/tvFirstGas"
+        app:layout_constraintTop_toBottomOf="@id/appTitle" />
+
+    <Button
+        android:id="@+id/btSearchFirstGas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        app:layout_constraintBottom_toTopOf="@id/spFirst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/etFirstGas"
+        app:layout_constraintTop_toBottomOf="@id/appTitle" />
+
+    <Space
+        android:id="@+id/spFirst"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFirstGas" />
+
+    <TextView
+        android:id="@+id/tvSecondGas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Consumo Combustivel 2"
+        app:layout_constraintBottom_toTopOf="sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spFirst" />
+
+    <EditText
+        android:id="@+id/etSecondGas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/btSearchFirstGas"
+        app:layout_constraintStart_toEndOf="@+id/tvSecondGas"
+        app:layout_constraintTop_toBottomOf="@id/spFirst" />
+
+    <Button
+        android:id="@+id/btSearchSecondGas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvSecondGas"
+        app:layout_constraintTop_toBottomOf="@id/spFirst" />
+
+    <Space
+        android:id="@+id/spSecond"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSecondGas" />
+
+    <TextView
+        android:id="@+id/tvFirstGasValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Valor Litro Combustivel 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spSecond" />
+
+    <EditText
+        android:id="@+id/etFirstGasValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/btSearchSecondGas"
+        app:layout_constraintStart_toEndOf="@+id/tvFirstGasValue"
+        app:layout_constraintTop_toBottomOf="@id/spSecond" />
+
+    <Space
+        android:id="@+id/spThird"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFirstGasValue" />
+
+    <TextView
+        android:id="@+id/tvSecondGasValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Valor Litro Combustivel 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spThird" />
+
+    <EditText
+        android:id="@+id/etSecondGasValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/btSearchSecondGas"
+        app:layout_constraintStart_toEndOf="@+id/tvSecondGasValue"
+        app:layout_constraintTop_toBottomOf="@id/spThird" />
+
+    <Space
+        android:id="@+id/spForth"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSecondGasValue" />
+
+    <Button
+        android:id="@+id/btCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Run"
+        app:layout_constraintTop_toBottomOf="@id/spForth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Space
+        android:id="@+id/spFifth"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btCalculate" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sample Result"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/spFifth"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/tvResultComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sample Comment"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult"
+        android:textAlignment="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
