@@ -53,7 +53,10 @@
         android:id="@+id/btSearchFirstGas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar"
+        app:icon="@drawable/ic_search"
+        app:iconPadding="8dp"
+        android:paddingStart="32dp"
+        app:iconSize="24dp"
         app:layout_constraintBottom_toTopOf="@id/spFirst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@id/etFirstGas"
@@ -84,7 +87,8 @@
         android:padding="10dp"
         android:text="Second Fuel"
         app:layout_constraintStart_toEndOf="@id/ic_gas_station2"
-        app:layout_constraintTop_toBottomOf="@id/spFirst" />
+        app:layout_constraintTop_toBottomOf="@id/spFirst"
+        app:layout_constraintBottom_toTopOf="@id/spSecond"/>
 
     <EditText
         android:id="@+id/etSecondGas"
@@ -99,7 +103,10 @@
         android:id="@+id/btSearchSecondGas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar"
+        app:icon="@drawable/ic_search"
+        app:iconPadding="8dp"
+        android:paddingStart="32dp"
+        app:iconSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@id/tvSecondGas"
         app:layout_constraintTop_toBottomOf="@id/spFirst" />
@@ -119,7 +126,8 @@
         android:padding="10dp"
         android:text="First Fuel $ per L"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spSecond" />
+        app:layout_constraintTop_toBottomOf="@id/spSecond"
+        app:layout_constraintBottom_toTopOf="@id/spThird"/>
 
     <EditText
         android:id="@+id/etFirstGasValue"
@@ -145,7 +153,8 @@
         android:padding="10dp"
         android:text="Second Fuel $ per L"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spThird" />
+        app:layout_constraintTop_toBottomOf="@id/spThird"
+        app:layout_constraintBottom_toTopOf="@id/spForth"/>
 
     <EditText
         android:id="@+id/etSecondGasValue"
